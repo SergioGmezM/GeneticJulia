@@ -1,4 +1,4 @@
-import GeneticJulia
+using GeneticJulia
 include("fitnessFunctions.jl")
 import Random
 println("hola")
@@ -68,7 +68,7 @@ end
 
 GeneticJulia.setIndividualType(GeneticJulia.CGPGenotype)
 GeneticJulia.setRandomSeed(54)
-GeneticJulia.setCGPInfo(nodesFile="src/utils/GeneticProgramming/Canonical/exampleNodesCGP.json")
+GeneticJulia.setCGPInfo(nodesFile="exampleNodesCGP.json")
 GeneticJulia.setStopCondition(maxIterations=50)
 GeneticJulia.setEvaluator([GeneticJulia.FitnessFunction(GeneticJulia.compareFunctions, objs, x, y, weight=-1)])
 GeneticJulia.setGenerator(GeneticJulia.rampedHalfHalfGenerator, popSize = 50, generateOneByOne = false)

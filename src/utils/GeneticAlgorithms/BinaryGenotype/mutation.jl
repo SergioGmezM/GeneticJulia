@@ -14,7 +14,7 @@ Mutates a **binary individual**, modifying each gene with a `probability`.
 - `probability::AbstractFloat`: lower limit for random generation.
 """
 function standardMutation(genotype::BinaryGenotype, rng::Random.AbstractRNG,
-                          probability::AbstractFloat = 0.1)::BinaryGenotype
+                          probability::AbstractFloat)::BinaryGenotype
 
     indRep = genotype._representation
     genLen = length(indRep)
@@ -34,7 +34,8 @@ end # function
 
 
 """
-    standardMutation(genotype::BinaryGenotype, rng::Random.AbstractRNG, nGens::Integer=1)
+    standardMutation(genotype::BinaryGenotype, rng::Random.AbstractRNG,
+                     nGens::Integer=1)::BinaryGenotype
 
 Mutates a **binary individual**, modifying a fixed set of genes.
 
@@ -47,7 +48,8 @@ Mutates a **binary individual**, modifying a fixed set of genes.
 # User Arguments
 - `nGens::Integer=1`: number of genes of the genotype that will be mutated.
 """
-function standardMutation(genotype::BinaryGenotype, rng::Random.AbstractRNG, nGens::Integer=1)
+function standardMutation(genotype::BinaryGenotype, rng::Random.AbstractRNG,
+                          nGens::Integer=1)::BinaryGenotype
 
     indRep = genotype._representation
     genLen = length(indRep)
