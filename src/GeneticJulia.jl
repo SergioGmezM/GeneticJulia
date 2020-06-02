@@ -1,5 +1,5 @@
 module GeneticJulia
 
-greet() = print("Hello World!")
+include("base.jl")
 
 end # module

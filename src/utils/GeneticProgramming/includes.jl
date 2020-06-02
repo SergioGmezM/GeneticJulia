@@ -1,0 +1,8 @@
+include("Canonical/includes.jl")
+include("StronglyTyped/includes.jl")
+include("GeneExpressionProgramming/includes.jl")
+include("GrammaticalEvolution/includes.jl")
+include("miscTreeFunctions.jl")
+include("evaluation.jl")
+include("initialization.jl")
+include("mutation.jl")
